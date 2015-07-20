@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6DBED24C-059E-4009-8AF1-7A538276FA25}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RSSFeeds</RootNamespace>
+    <AssemblyName>RSSFeeds</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>RSS.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DMSys.Data.SQLite">
+      <HintPath>..\..\Framework\DMSys.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="DMSys.Net">
+      <HintPath>..\..\Framework\DMSys.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dUtils.cs" />
+    <Compile Include="FCategory_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCategory_Edit.Designer.cs">
+      <DependentUpon>FCategory_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLDocNavigator.cs" />
+    <Compile Include="News\NewsData.cs" />
+    <Compile Include="News\Parser\RSSZarBG.cs" />
+    <Compile Include="News\Parser\RSSSignalBG.cs" />
+    <Compile Include="News\Parser\RSSExpertBG.cs" />
+    <Compile Include="News\Parser\RSSComputerWorldBG.cs" />
+    <Compile Include="News\Parser\RSSGongBG.cs" />
+    <Compile Include="News\Parser\RSSIdgBG.cs" />
+    <Compile Include="News\Parser\RSSActualnoCOM.cs" />
+    <Compile Include="News\Parser\RSSBGFactorORG.cs" />
+    <Compile Include="News\Parser\RSSDarikNewsBG.cs" />
+    <Compile Include="News\Parser\RSSDirBG.cs" />
+    <Compile Include="News\Parser\RSSDnesBG.cs" />
+    <Compile Include="News\Parser\RSSHiCommBG.cs" />
+    <Compile Include="News\Parser\RSSHotNewsBG.cs" />
+    <Compile Include="News\Parser\RSSInvestorBG.cs" />
+    <Compile Include="News\Parser\RSSNewsBG.cs" />
+    <Compile Include="News\Parser\RSSCapitalBG.cs" />
+    <Compile Include="News\Parser\RSSBtvBG.cs" />
+    <Compile Include="News\Parser\RSSDoctorOnlineBG.cs" />
+    <Compile Include="News\Parser\IParser.cs" />
+    <Compile Include="News\Parser\RSSMobileBulgariaCOM.cs" />
+    <Compile Include="News\Parser\PTools.cs" />
+    <Compile Include="News\ENews.cs" />
+    <Compile Include="News\Parser\RSSSPortalBG.cs" />
+    <Compile Include="UCTools.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTools.Designer.cs">
+      <DependentUpon>UCTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Declarations.cs" />
+    <Compile Include="frmRss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRss.designer.cs">
+      <DependentUpon>frmRss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewsData.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FCategory_Edit.resx">
+      <DependentUpon>FCategory_Edit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTools.resx">
+      <DependentUpon>UCTools.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRss.resx">
+      <DependentUpon>frmRss.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCCategories.resx">
+      <DependentUpon>UCCategories.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRSSNews.resx">
+      <DependentUpon>UCRSSNews.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTest.resx">
+      <DependentUpon>UCTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCUpdateData.resx">
+      <DependentUpon>UCUpdateData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UCCategories.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCategories.Designer.cs">
+      <DependentUpon>UCCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCRSSNews.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRSSNews.Designer.cs">
+      <DependentUpon>UCRSSNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTest.Designer.cs">
+      <DependentUpon>UCTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCUpdateData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCUpdateData.Designer.cs">
+      <DependentUpon>UCUpdateData.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RSS.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
